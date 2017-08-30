@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   post '/sessions' => "sessions#create"
   get '/logout' => "sessions#destroy"
 
+  #get '/auth/facebook/callback' => 'sessions#create'
+  get '/auth/github/callback' => 'sessions#create'
+
   #get 'sessions/new'
   #get 'sessions/create'
   #get 'sessions/destroy'
